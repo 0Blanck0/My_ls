@@ -15,7 +15,7 @@ char *my_strdup(const char *src)
 
     dest = (char *)malloc((sizeof(char) * (len + 1)));
     if (!dest)
-    	return (0);
+        return (0);
     dest = my_strcpy(dest, src);
     dest[len] = '\0';
     return (dest);
