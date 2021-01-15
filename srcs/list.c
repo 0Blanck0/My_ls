@@ -23,13 +23,11 @@ char *my_get_permissions(struct stat my_stats)
 		ret[i] = 0;
 		i++;
 	}
-
 	ret[0] = is_directory(my_stats) ? 'd' : '-';
 	ret = my_strcat(ret, convert_decimal_to_perm(owner));
 	ret = my_strcat(ret, convert_decimal_to_perm(user));
 	ret = my_strcat(ret, convert_decimal_to_perm(other));
   	ret[10] = '\0';
-	
     return (ret);
 }
 
@@ -42,18 +40,14 @@ linked_list_t *get_file_data(struct dirent *my_file, linked_list_t *list)
 
 	stat(my_file->d_name ,&my_stats);
 	elem->name = my_strdup(my_file->d_name);
-
 	time = localtime(&my_stats.st_ctime);
 	strftime(buf, MAX_SIZE, "%b %d %H:%M", time);
 	elem->creation_time = my_strdup(buf);
-
 	strftime(buf, MAX_SIZE, "%y/%m/%d/%H:%M:%S", time);
 	elem->edit_timestamp = my_strdup(buf);
-
 	time = localtime(&my_stats.st_ctime);
 	strftime(buf, MAX_SIZE, "%b %d %H:%M", time);
 	elem->modification_time = my_strdup(buf);
-
 	elem->permissions = my_get_permissions(my_stats);
 	elem->nb_links = my_stats.st_nlink;
 	elem->size = my_stats.st_size;
@@ -73,6 +67,5 @@ linked_list_t *my_create_list(char *path)
     while ((my_file = readdir(my_dir)) != NULL) {
     	list = get_file_data(my_file, list);
     }
-
 	return (list);
 }

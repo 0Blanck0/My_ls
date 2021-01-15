@@ -18,7 +18,6 @@ char *my_strlowcase_custom(char *str)
 			
         i++;
     }
-
     return (dest);
 }
 
@@ -41,7 +40,6 @@ linked_list_t *my_sort(linked_list_t *list)
 		} else
 			current = current->next;
 	}
-
 	return (begin);
 }
 
@@ -64,7 +62,6 @@ linked_list_t *my_reverse_sort(linked_list_t *list)
 		} else
 			current = current->next;
 	}
-	
 	return (begin);
 }
 
@@ -86,6 +83,5 @@ linked_list_t *my_sort_time(linked_list_t *list)
 		} else
 			current = current->next;
 	}
-
 	return (begin);
 }

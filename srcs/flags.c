@@ -17,7 +17,6 @@ int my_get_nb_flags(char **argv)
             ret++;
         i++;
     }
-    
     return (ret);
 }
 
@@ -39,7 +38,6 @@ int *fill_flag_tab(char **flags, int *flag_tab, int i)
         flag_tab[6] = 1;
     if (my_strchr(flags[i], 'L'))
         flag_tab[7] = 1;
-
     return (flag_tab);
 }
 
@@ -53,9 +51,7 @@ int *my_get_flags(char **flags)
         flag_tab[i] = 0;
         i++;
     }
-
     i = 1;
-
     while (nb_flags_slots) {
         if (flags[i][0] == '-') {
             fill_flag_tab(flags, flag_tab, i);
@@ -63,6 +59,5 @@ int *my_get_flags(char **flags)
         }
         i++;
     }
-
     return (flag_tab);
 }

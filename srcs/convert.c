@@ -16,7 +16,6 @@ int decimal_to_octal(int decimalnum)
     	decimalnum = decimalnum / 8;
         temp = temp * 10;
     }
-
     return octalnum;
 }
 
@@ -61,6 +60,5 @@ char* convert_decimal_to_perm(int param)
     else
         ret[2] = '-';
     ret[3] = '\0';
-    
     return(ret);
 }

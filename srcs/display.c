@@ -16,7 +16,6 @@ void my_display_no_flags (linked_list_t *list)
 			my_putstr(elem->name);
 			my_putstr("\n");
 		}
-
 		elem = elem->next;
 	}
 }
@@ -53,7 +52,6 @@ void my_display_l (linked_list_t *list, int *flag_tab)
 			my_putstr(elem->name);
 			my_putstr("\n");
 		}
-		
 		elem = elem->next;
 	}
 }

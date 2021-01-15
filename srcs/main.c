@@ -18,7 +18,6 @@ int get_nb_dir(int argc, char **argv)
         if (S_ISDIR(st.st_mode))
             dir_count += 1;
     }
-
     return(dir_count);
 }
 
@@ -66,6 +65,5 @@ int main(int argc, char **argv)
             cpt++;
         }
     }
-
     return (0);
 }

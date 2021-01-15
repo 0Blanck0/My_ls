@@ -30,6 +30,5 @@ int get_file_permissions(struct stat stats)
     perm_int = decimal_to_octal(perm_int);
     int perm_parse = perm_int/10000;
     perm_int = perm_int - (perm_parse*10000);
-
     return perm_int;
 }
