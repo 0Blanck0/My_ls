@@ -14,22 +14,25 @@ Ce projet consiste a recréer la commande "ls" du terminal linux en prenant en c
 
 Les fonctions autoriser pour ce projet sont:
 
-opendir
-readdir
-closedir
-stat
-lstat
-getpwuid
-getgrgid
-getcwd
-ctime / ctime_r / strftime / localtime / localtime_r
-readlink
-getopt
-malloc
-free
-errno / strerror
-write
+- opendir  
+- readdir  
+- closedir  
+- stat
+- lstat
+- getpwuid
+- getgrgid
+- getcwd
+- ctime / ctime_r / strftime / localtime / localtime_r
+- readlink
+- getopt
+- malloc
+- free
+- errno / strerror
+- write
 
-Les membres du groupes sont:
+   
+Collaborateurs :
+======
 
-elisab_a et rechau_l
+Alexandre ELISABETH - [0Blanck0](https://github.com/0Blanck0/),  
+Lucas RECHAUCHERE - [Alphyr](https://github.com/Alphyr/)
